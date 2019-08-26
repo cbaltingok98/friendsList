@@ -1,14 +1,14 @@
 window.setTimeout(function () {
-    var arrayOfaccounts = [];
-    var numofComments = 0;
+    let arrayOfaccounts = [];
+    let numofComments = 0;
 
-    var accounts = {
+    let accounts = {
         id: undefined,
         comments: []
     };
 
     function addAccountManually(account) {
-        var comm;
+        let comm;
         account.id = prompt("Enter an account ID");
         comm = "Selam " + accounts.id;
         account.comments = [comm];
@@ -17,11 +17,11 @@ window.setTimeout(function () {
     }
 
     function createRandomAccounts(account) {
-        var numOfaccounts = Number(prompt("Hoow many random accounts would you like to create?"));
-        var sampleID = "randomAccount1";
-        var sampleComment = "randomComment1";
+        let numOfaccounts = Number(prompt("Hoow many random accounts would you like to create?"));
+        let sampleID = "randomAccount1";
+        let sampleComment = "randomComment1";
 
-        for (var i = 1; i <= numOfaccounts; i++) {
+        for (let i = 1; i <= numOfaccounts; i++) {
 
             account.id = sampleID;
             account.comments = [sampleComment];
@@ -43,8 +43,8 @@ window.setTimeout(function () {
     }
 
     function findAccount(account, bool) {
-        var findUser = prompt("Find user by ID (exmp : randomAccount1");
-        var answer;
+        let findUser = prompt("Find user by ID (exmp : randomAccount1");
+        let answer;
         arrayOfaccounts.forEach(function (item, index) {
 
 
@@ -87,8 +87,8 @@ window.setTimeout(function () {
         console.log("Comments: " + arrayOfaccounts[index].comments[numofComments]);
     }
 
-    var userInput;
-    var bool;
+    let userInput;
+    let bool;
 
     while (userInput !== "quit") {
 
